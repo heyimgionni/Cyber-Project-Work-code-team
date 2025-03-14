@@ -1,0 +1,60 @@
+@import url("./reset.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--clr-bg);
+}
+
+.btn-blue {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background: var(--clr-bg);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.container {
+  padding: 2rem;
+  height: 50vh;
+  min-width: 40vw;
+  max-width: 40vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.input__zone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input__zone p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.input__zone input {
+  width: 50%;
+}
+
+.output {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.phrase {
+  font-size: 3rem;
+}
