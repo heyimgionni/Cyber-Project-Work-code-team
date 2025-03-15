@@ -35,6 +35,10 @@ body {
   font-size: 2rem;
 }
 
+.password__box i {
+  cursor: pointer;
+}
+
 .check__zone {
   margin: 3rem 0;
   display: flex;
