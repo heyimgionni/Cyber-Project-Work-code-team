@@ -45,10 +45,6 @@ const handleCopy = () => {
 
 generateBtn.addEventListener("click", () => {
   const len = Number(inputRange.value);
-  if (isNaN(len) || len <= 0) {
-    alert("Please enter a valid password length greater than 0.");
-    return;
-  }
   handleGeneratePasswordPolicy(len);
 });
 copyBtn.addEventListener("click", handleCopy);
