@@ -1,5 +1,6 @@
 import costrains from "./utils/constrains";
 import levels from "./utils/level";
+import fetchData from "./utils/fetchHYBP";
 
 document.addEventListener("DOMContentLoaded", () => {
   const seePasswordBtn = document.querySelector(".input__zone i");
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const entropyBtn = document.querySelector(".btn-entropy");
   const securityBar = document.querySelector(".security");
   const securityPar = document.querySelector(".security p");
+  const checkBtn = document.querySelector(".btn-check");
 
   const handleVisibilityPassword = () => {
     const isVisible = seePasswordBtn.classList.contains("fa-eye");
@@ -77,4 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
     handleSecurityBar();
   });
   entropyBtn.addEventListener("click", handleCalculationEntropy);
+  checkBtn.addEventListener("click", () => {
+    const password = input.value;
+    fetchData(password);
+  });
 });

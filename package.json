@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "chart.js": "^4.4.8",
+    "crypto-js": "^4.2.0",
     "gsap": "^3.12.7",
     "hibp-js": "^1.0.0"
   }
