@@ -1,0 +1,140 @@
+@import url(./reset.css);
+@import url(./preloader.css);
+
+:root {
+  --surface-1: #020617;
+  --surface-2: #0f172a;
+  --surface-3: #1e293b;
+  --gradient: linear-gradient(
+    20deg,
+    hsla(0 0% 0% / 0) 20%,
+    hsla(0 0% 100% / 0.065) 120%
+  );
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 95vw;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  background: url("../assets/bg.jpg") center center no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+}
+
+.navbar {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar h3 > i {
+  margin-right: 1rem;
+}
+
+.navbar .menu-link {
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+.hero h1 {
+  font-size: 6vw;
+}
+
+/* services */
+
+.services {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.services__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 50vh;
+  width: 70vw;
+}
+
+.services__items .item {
+  color: #fff;
+  border: 1px solid var(--surface-3);
+  background-color: var(--surface-2);
+  background-image: var(--gradient);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  flex: 1;
+  min-height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.working {
+  align-items: center;
+  font-size: 4rem;
+}
+.services__items .row {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-link {
+  padding: 1rem 2rem;
+  background: #003ca7;
+  cursor: pointer;
+  border-radius: 2rem;
+  width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    height: 60vh;
+  }
+  .hero {
+    height: 40vh;
+  }
+  .services {
+    min-height: 200vh;
+  }
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .services__items .item {
+    font-size: 1.2rem;
+  }
+}

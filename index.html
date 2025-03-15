@@ -3,11 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Password Utilty || Homepage</title>
   </head>
   <body>
-    <a href="./passwordChecker.html">Password Checker</a>
-    <a href="./passPhraseGen.html">Passphrase Generator</a>
-    <a href="./passwordGenerator.html">Passwrod Generator</a>
+    <div class="preloader">
+      <div class="preloader__text">
+        <span>Welcome to password utility</span>
+      </div>
+      <div class="preloader__bg"></div>
+    </div>
+    <header class="header">
+      <div class="wrapper">
+        <nav class="navbar">
+          <h3><i class="fa-solid fa-lock"></i>Password Utility</h3>
+          <a href="#services" class="menu-link">./services</a>
+        </nav>
+        <div class="hero">
+          <h1>
+            <span>Create, check, secure </span> <br />
+            <span>passwords </span> <br />
+            <span>easier than ever.</span>
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="services" id="services">
+      <div class="services__items">
+        <div class="row">
+          <div class="item">
+            <h2>Password Checker</h2>
+            <p>
+              Check if your password <br />
+              is secure and if is in the <br />
+              "Have you been pawned" dataset
+            </p>
+            <a href="./passwordChecker.html" class="btn-link"
+              >Password Checker</a
+            >
+          </div>
+          <div class="item">
+            <h2>Passphrase Generator</h2>
+            <p>
+              Generate Passphrases that you <br />
+              in crypto meta-mask fashion
+            </p>
+            <a href="./passPhraseGen.html" class="btn-link"
+              >Passphrase Generator</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="item">
+            <h2>Password Generator</h2>
+            <p>
+              You choose how to protect yourself <br />
+              so generate and use your new password
+            </p>
+            <a href="./passwordGenerator.html" class="btn-link"
+              >Passwrod Generator</a
+            >
+          </div>
+          <div class="item working">?</div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./scripts/preloader.js" type="module"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./preloader.css");
 
 body {
   display: flex;

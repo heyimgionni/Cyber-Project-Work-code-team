@@ -7,6 +7,19 @@
     <title>Password Utility || PassPhrase Generator</title>
   </head>
   <body>
+    <div class="preloader">
+      <div class="preloader__text">
+        <span>Passphrases Generator</span>
+      </div>
+      <div class="preloader__bg"></div>
+    </div>
+    <div class="arrow__left">
+      <a href="index.html"
+        ><img
+          src="./assets/arrow-left.svg"
+          alt="arrow direction left to go back to the homepage"
+      /></a>
+    </div>
     <div class="arrow__left">
       <a href="index.html"
         ><img
@@ -22,7 +35,7 @@
       </div>
       <div class="output"></div>
     </div>
-
+    <script src="./scripts/utils/preloaderX.js" type="module"></script>
     <script type="module" src="./scripts/passphraseGen.js"></script>
   </body>
 </html>
