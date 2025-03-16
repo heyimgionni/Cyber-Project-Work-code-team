@@ -1,7 +1,11 @@
+import handleOverlayAnimation from "./utils/overlayMsg";
+
 const generateBtn = document.querySelector("button");
 const passwordOutput = document.querySelector(".password");
 const copyBtn = document.querySelector(".copy");
 const inputRange = document.querySelector(".range");
+const overlay = document.querySelector(".overlay");
+const overlayText = document.querySelector(".overlay p");
 
 const handleGeneratePasswordPolicy = (n) => {
   const isLowerCheck = document.querySelector(".lower").checked;
@@ -47,4 +51,8 @@ generateBtn.addEventListener("click", () => {
   const len = Number(inputRange.value);
   handleGeneratePasswordPolicy(len);
 });
-copyBtn.addEventListener("click", handleCopy);
+copyBtn.addEventListener("click", () => {
+  handleCopy();
+  handleOverlayAnimation(overlay);
+  overlayText.textContent = "✅ Password Copied To The clipboard";
+});

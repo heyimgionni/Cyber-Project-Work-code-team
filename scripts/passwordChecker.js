@@ -1,7 +1,7 @@
 import costrains from "./utils/constrains";
 import levels from "./utils/level";
 import fetchData from "./utils/fetchHYBP";
-import gsap from "gsap";
+import handleOverlayAnimation from "./utils/overlayMsg";
 
 document.addEventListener("DOMContentLoaded", () => {
   const seePasswordBtn = document.querySelector(".input__zone i");
@@ -84,20 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   entropyBtn.addEventListener("click", handleCalculationEntropy);
   checkBtn.addEventListener("click", () => {
     const password = input.value;
-    const tl = gsap.timeline();
-    gsap.set(overlay, { display: "none", y: -100 });
-    if (password) {
-      tl.to(overlay, {
-        display: "block",
-        opacity: 1,
-        y: 0,
-      }).to(overlay, {
-        delay: 2,
-        y: -100,
-        opacity: 0,
-        display: "none",
-      });
-    }
+    if (password) handleOverlayAnimation(overlay);
     // dobbiamo usare o una funzione async await oppure una then() perche
     // altrimenti ritorna una oggetto promise
     fetchData(password)
