@@ -57,3 +57,9 @@ body {
   transform: translate(-50%, -50%);
   font-size: 1.6rem;
 }
+
+@media screen and (max-width: 768px) {
+  .overlay p {
+    font-size: 1.2rem;
+  }
+}
