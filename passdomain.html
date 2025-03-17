@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/passdomain.css" />
+    <title>Pass Domain || Password Utility</title>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="preloader__text">
+        <span>Password Domain</span>
+      </div>
+      <div class="preloader__bg"></div>
+    </div>
+    <div class="arrow__left">
+      <a href="index.html"
+        ><img
+          src="./assets/arrow-left.svg"
+          alt="arrow direction left to go back to the homepage"
+      /></a>
+    </div>
+    <div class="overlay">
+      <p></p>
+    </div>
+    <div class="container">
+      <div class="input__zone">
+        <div class="master">
+          <label for="master">Master Password</label>
+          <input
+            name="master"
+            type="text"
+            placeholder="Insert the master password ..."
+          />
+        </div>
+        <div class="domain">
+          <label for="domain">Domain (es. netflix.com)</label>
+          <input
+            name="domain"
+            type="text"
+            placeholder="Insert the domain ..."
+          />
+        </div>
+      </div>
+      <a href="#" class="btn-blue btn-generate">Convert</a>
+      <div class="output">
+        <p></p>
+      </div>
+    </div>
+    <script src="./scripts/utils/preloaderX.js" type="module"></script>
+    <script src="./scripts/passdomain.js" type="module"></script>
+  </body>
+</html>
