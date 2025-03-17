@@ -13,29 +13,41 @@ const handleGeneratePasswordPolicy = (n) => {
   const isDigitCheck = document.querySelector(".digit").checked;
   const isSpecialCheck = document.querySelector(".special").checked;
 
-  let password = "";
   const lower = "abcdefghijklmnopqrstuvwxyz";
   const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const digit = "0123456789";
   const special = `!@#$%^&()_+-={}|:;"'<>.,?/`;
   let allCases = "";
+  let password = [];
 
-  if (isLowerCheck) allCases += lower;
-  if (isUpperCheck) allCases += upper;
-  if (isDigitCheck) allCases += digit;
-  if (isSpecialCheck) allCases += special;
-
+  if (isLowerCheck) {
+    allCases += lower;
+    password.push(lower[Math.floor(Math.random() * lower.length)]);
+  }
+  if (isUpperCheck) {
+    allCases += upper;
+    password.push(upper[Math.floor(Math.random() * upper.length)]);
+  }
+  if (isDigitCheck) {
+    allCases += digit;
+    password.push(digit[Math.floor(Math.random() * digit.length)]);
+  }
+  if (isSpecialCheck) {
+    allCases += special;
+    password.push(special[Math.floor(Math.random() * special.length)]);
+  }
   if (!allCases) {
-    passwordOutput.textContent = "Please select at least one character type.";
+    passwordOutput.textContent =
+      "⚠️ Please select at least one character type.";
     return;
   }
 
-  for (let i = 0; i < n; i++) {
-    password += allCases[Math.floor(Math.random() * allCases.length)];
+  // Fill the rest of the password length with random characters
+  for (let i = password.length; i < n; i++) {
+    password.push(allCases[Math.floor(Math.random() * allCases.length)]);
   }
 
   password = password
-    .split("") // Convert string to array
     .sort(() => Math.random() - 0.5) // Shuffle array randomly
     .join(""); // Join the array back to string
 
