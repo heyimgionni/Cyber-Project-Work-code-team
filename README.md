@@ -1,5 +1,7 @@
-Password Checker e PassPhrase Generator e Passwrod Generator Fatti 
-Manca Il Domain Pass Generator e Controllare Psassword Generator 
-
-
-
+Progetto finito ✅
+Capire se aggiungere qualcosa
+Fare la documentazione
+Fare le slide
+Video Spiegazine del progetto
+Capire se ha senso aggiungere python
+Buildare il progetto ed hostarlo
