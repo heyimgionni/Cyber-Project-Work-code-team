@@ -53,5 +53,3 @@ generateBtn.addEventListener("click", () => {
   if (masterInput.value && domainInput.value)
     output.textContent = handleDeterministicHash();
 });
-
-// B28D3CAC1E3E9248

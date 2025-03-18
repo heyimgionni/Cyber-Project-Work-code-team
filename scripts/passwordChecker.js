@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isVisible = seePasswordBtn.classList.contains("fa-eye");
     seePasswordBtn.classList.toggle("fa-eye", !isVisible);
     seePasswordBtn.classList.toggle("fa-eye-slash", isVisible);
-    input.type = isVisible ? "text" : "password";
+    input.type = isVisible ? "password" : "text";
   };
 
   const handlePasswordValidation = () => {
