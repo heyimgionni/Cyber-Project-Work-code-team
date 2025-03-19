@@ -1,5 +1,4 @@
 // take the password and the domain
-// cypher the domain with vigenere -- dopo
 // converto to hash for some time
 // make it HEX and the take the first 16 char of the hash
 
@@ -24,9 +23,12 @@ const handleDeterministicHash = () => {
 
   try {
     // in case the doamin is a full url line www.netflix.com
-    let url = new URL(domain);
-    // this will extract only the domain
-    domain = url.hostname;
+    // let url = new URL(domain);
+    // // this will extract only the domain
+    // domain = url.hostname;
+    domain = domain.replace(/^www\./, ""); // Remove 'www.'
+    domain = domain.replace(/^http:\/\//, ""); // Remove 'http://'
+    domain = domain.replace(/^https:\/\//, ""); // Remove 'https://'
   } catch (error) {
     if (!isValidDomain(domain)) {
       handleOverlayAnimation(overlay);
